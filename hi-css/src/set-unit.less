@@ -1,0 +1,15 @@
+/**
+ * 单位转换
+ */
+@fontSize: 100px;
+@UIWidth: 750;
+@scale: 2;
+
+/**
+ * 调用方法 .set-value(80)[@px];
+ */
+.set-value(@num) {
+  @px: (@num / @scale) * 1px;
+  @rem: (@num / @fontSize) * 1rem;
+  @vw: (@num / @UIWidth) * 100vw;
+}

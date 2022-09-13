@@ -1,0 +1,243 @@
+/* 1px 细线 */
+/**
+ * @Overview: 顶部线条
+ */
+.set-top-line(@color:#EBEDF5) {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 16px;
+  right: 0;
+  z-index: 8;
+  height: 1px;
+  background-color: @color;
+
+  @media (min--moz-device-pixel-ratio: 1.5),
+    (-webkit-min-device-pixel-ratio: 1.5),
+    (min-device-pixel-ratio: 1.5),
+    (min-resolution: 144dpi),
+    (min-resolution: 1.5dppx),
+    (-ms-high-contrast: active),
+    (-ms-high-contrast: none) {
+    /*上边框*/
+    & {
+      transform: scaleY(0.5);
+    }
+    /*上边框,*/
+    & {
+      transform-origin: 0 0;
+    }
+  }
+
+  @media (-webkit-device-pixel-ratio: 1.5) {
+    /*上边框*/
+    & {
+      transform: scaleY(0.66666666);
+    }
+  }
+
+  @media (-webkit-device-pixel-ratio: 3) {
+    /*上边框*/
+    & {
+      transform: scaleY(0.3333);
+    }
+  }
+}
+/**
+ * @Overview: 左边线条
+ */
+.set-left-line(@color:#EBEDF5) {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 8;
+  width: 1px;
+  background-color: @color;
+
+  @media (min--moz-device-pixel-ratio: 1.5),
+    (-webkit-min-device-pixel-ratio: 1.5),
+    (min-device-pixel-ratio: 1.5),
+    (min-resolution: 144dpi),
+    (min-resolution: 1.5dppx),
+    (-ms-high-contrast: active),
+    (-ms-high-contrast: none) {
+    /* 左边框 */
+    & {
+      transform: scaleX(0.5);
+    }
+    /* 左边框 */
+    & {
+      transform-origin: 0 0;
+    }
+  }
+
+  @media (-webkit-device-pixel-ratio: 1.5) {
+    /* 左边框 */
+    & {
+      transform: scaleX(0.66666666);
+    }
+  }
+
+  @media (-webkit-device-pixel-ratio: 3) {
+    /* 左边框 */
+    & {
+      transform: scaleX(0.3333);
+    }
+  }
+}
+/**
+ * @Overview: 底部线条
+ */
+.set-bottom-line(@color: #EBEDF5) {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 8;
+  height: 1px;
+  background-color: @color;
+
+  @media (min--moz-device-pixel-ratio: 1.5),
+    (-webkit-min-device-pixel-ratio: 1.5),
+    (min-device-pixel-ratio: 1.5),
+    (min-resolution: 144dpi),
+    (min-resolution: 1.5dppx),
+    (-ms-high-contrast: active),
+    (-ms-high-contrast: none) {
+    /*下边框*/
+    & {
+      transform: scaleY(0.5);
+    }
+
+    /*下边框*/
+    & {
+      transform-origin: 100% 100%;
+    }
+  }
+
+  @media (-webkit-device-pixel-ratio: 1.5) {
+    /*下边框*/
+    & {
+      transform: scaleY(0.66666666);
+    }
+  }
+
+  @media (-webkit-device-pixel-ratio: 3) {
+    /*下边框*/
+    & {
+      transform: scaleY(0.3333);
+    }
+  }
+}
+/**
+ * @Overview: 右边线条
+ */
+.set-right-line(@color: #EBEDF5) {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 8;
+  width: 1px;
+  background-color: @color;
+
+  @media only screen and (min--moz-device-pixel-ratio: 1.5),
+    (-webkit-min-device-pixel-ratio: 1.5),
+    (min-device-pixel-ratio: 1.5),
+    (min-resolution: 144dpi),
+    (min-resolution: 1.5dppx),
+    (-ms-high-contrast: active),
+    (-ms-high-contrast: none) {
+    /* 右边框 */
+    & {
+      transform: scaleX(0.5);
+    }
+
+    /* 右边框 */
+    & {
+      transform-origin: 100% 100%;
+    }
+  }
+
+  @media only screen and (-webkit-device-pixel-ratio: 1.5) {
+    /* 右边框 */
+    & {
+      transform: scaleY(0.666666);
+    }
+  }
+
+  @media only screen and (-webkit-device-pixel-ratio: 3) {
+    /* 右边框 */
+    & {
+      transform: scale(0.3333);
+    }
+  }
+}
+/**
+ * @Overview: 四边线条
+ */
+.set-border-line(@color: #EBEDF5, @borderRadius: 8px) {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  border: 1px solid @color;
+  box-sizing: border-box;
+  border-radius: @borderRadius;
+
+  @media only screen and (min--moz-device-pixel-ratio: 1.5),
+    (-webkit-min-device-pixel-ratio: 1.5),
+    (min-device-pixel-ratio: 1.5),
+    (min-resolution: 144dpi),
+    (min-resolution: 1.5dppx),
+    (-ms-high-contrast: active),
+    (-ms-high-contrast: none) {
+    /* 四边框 */
+    & {
+      transform-origin: 0 0;
+    }
+    /* 四边框 */
+    & {
+      width: 200%;
+      height: 200%;
+      border-radius: @borderRadius * 2;
+    }
+    /* 四边框 */
+    & {
+      transform: scale(0.5);
+    }
+  }
+
+  @media only screen and (-webkit-device-pixel-ratio: 1.5) {
+    /* 四边框 */
+    & {
+      width: 150%;
+      height: 150%;
+      border-radius: @borderRadius * 1.5;
+    }
+    /* 四边框 */
+    & {
+      transform: scale(0.666666);
+    }
+  }
+
+  @media only screen and (-webkit-device-pixel-ratio: 3) {
+    /* 四边框 */
+    & {
+      width: 300%;
+      height: 300%;
+      border-radius: @borderRadius * 3;
+    }
+    /* 四边框 */
+    & {
+      transform: scale(0.3333);
+    }
+  }
+}
