@@ -14,7 +14,7 @@ class Stack {
   }
   // 移除栈
   pop() {
-    if (this.isEmpty) {
+    if (this.isEmpty()) {
       return undefined;
     }
     this.count--;
